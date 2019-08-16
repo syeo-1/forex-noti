@@ -2,7 +2,7 @@ import requests
 #import config
 import sys
 
-from config import Config
+#from config import Config
 
 # def formatResponse(forexData):
 #     try:
