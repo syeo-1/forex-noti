@@ -1,6 +1,5 @@
 import smtplib
 from getAPIdata import *#get all methods
-#import script
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -21,12 +20,14 @@ msg["Subject"] = subject
 # message += "USD is: " + str(forex_data["USD_CAD"]) + " CAD dollars"
 # print(message)
 
-baseAndEx = baseAndEx()
-base = baseAndEx["base"]
-exchange = baseAndEx["exchange"]
+# baseAndEx = baseAndEx()
+# base = baseAndEx["base"]
+# exchange = baseAndEx["exchange"]
+base = "USD"
+exchange = "CAD"
 
 try:
-    (forex_data, formattedKey) = get_currency_data(baseAndEx)
+    (forex_data, formattedKey) = get_currency_data(base + "_" + exchange)
     message += base + " is: " + str(forex_data[formattedKey]) + " " + exchange + " dollars"
 
     msg.attach(MIMEText(message, "plain"))
@@ -39,5 +40,4 @@ try:
     server.quit()
 except:
     print("problem retrieving data")
-
 
