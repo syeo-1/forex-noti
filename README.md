@@ -12,3 +12,5 @@ personal notes:
 - only include libraries that do not already exist within standard library
 	- refer to this link: https://github.com/heroku/heroku-buildpack-python/issues/790
 - after deploying successfully, all that needs to be done (currently) is to initiate a worker process
+- remember to be in the appropriate directory to run the code in the terminal
+	- heroku login first and then do the worker initiation
