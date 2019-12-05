@@ -3,9 +3,9 @@ from getAPIdata import *#get all methods
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-email = "fortestingforex@gmail.com"
-password = "a0b1c2d3"
-send_to_email = "fortestingforex1@gmail.com"
+email = "email@gmail.com"
+password = "password"
+send_to_email = "email1@gmail.com"
 
 subject = "desired rate detected"
 message = ""
